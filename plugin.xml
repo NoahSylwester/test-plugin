@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-key-events" version="1.0">
+    <name>Key Events</name>
+    <description>Cordova Device Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,keyboard,events,key</keywords>
+    <js-module src="www/key-events.js" name="key-events">
+        <clobbers target="device" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="KeyEvents">
+                <param name="ios-package" value="KeyEvents"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/KeyEvents.h" />
+        <source-file src="src/ios/KeyEvents.m" />
+    </platform>
+</plugin>
